@@ -4,45 +4,25 @@ const output = document.getElementById('output')
 
 convertBtn.addEventListener('click', (e) => {
   e.preventDefault()
-  console.log(inputNumber.value)
 
   if (inputNumber.value === '') {
-    output.classList.remove('hidden')
-    output.innerHTML = `
-    <p>Please enter a valid number.</p>
-    `
-    output.classList.add('error')
-    
+    msgAlert(`<p>Please enter a valid number.</p>`)
     return
   } 
   
   if (inputNumber.value < 1) {
-    output.classList.remove('hidden')
-    output.innerHTML = `
-    <p>Please enter a number greater than or equal to 1.</p>
-    `
-    output.classList.add('error')
+    msgAlert(`<p>Please enter a number greater than or equal to 1.</p>`)
 
     return
   } 
   
   if (inputNumber.value > 3999) {
-    output.classList.remove('hidden')
-    output.innerHTML = `
-    <p>Please enter a number less than or equal to 3999.</p>
-    `
-    output.classList.add('error')
+    msgAlert(`<p>Please enter a number less than or equal to 3999.</p>`)
 
     return
   }
-  //  else {
-  //   output.classList.add('hidden')
-  //   output.innerHTML = ''
-  //   output.classList.remove('error')
-  // }
-
+  
   let numberArr = inputNumber.value.split('')
-  console.log(numberArr)
   let convertedNumber
 
   switch (numberArr.length) {
@@ -62,15 +42,16 @@ convertBtn.addEventListener('click', (e) => {
       return
   }
 
-  console.log(convertedNumber)
-
   output.classList.remove('error')
   output.classList.remove('hidden')
-  output.innerHTML = `
-  <p>${convertedNumber}</p>
-  `
+  output.innerHTML = `<p>${convertedNumber}</p>`
 })
 
+const msgAlert = (msg) => {
+  output.classList.remove('hidden')
+  output.innerHTML = msg
+  output.classList.add('error')
+}
 
 const unit = (number) => {
   let roman
