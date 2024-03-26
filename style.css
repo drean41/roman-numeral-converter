@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+}
+
+.app {
+  margin: 10rem auto 0;
+  max-width: 60rem;
+}
+
+.app h1 {
+  text-align: center;
+  margin: 0 auto 2rem;
+  font-size: 3.6rem;
+  max-width: 40rem;
+}
+
+.form {
+  background-color: #3b3b4f;
+  border: .3rem solid #fff;
+  padding: 4rem;
+}
+
+.form label {
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+}
+
+#number {
+  width: 100%;
+  margin: 2rem 0;
+  padding: .6rem 1.2rem;
+  background-color: #0a0a23;
+  border: .1rem solid #fff;
+  color: #fff;
+  font-size: 3.2rem;
+}
+
+#convert-btn {
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: .2rem solid #feac32;
+  padding: 1rem 2rem;
+  width: 100%;
+  font-size: 2.4rem;
+}
+
+.output {
+  background-color: #3b3b4f;
+  border: .3rem solid #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  background-color: #ffadad;
+  border: .3rem solid #850000;
+  color: #850000;
+  font-size: 3rem;
+}
